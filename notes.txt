@@ -1,0 +1,21 @@
+IN JS:
+class AppComponent extends HTMLElement {
+  constructor() {
+    super()
+    ...
+  }
+}
+
+window.custmElements.define('app-component', AppComponent)
+
+OPTIONS:
+constructor() - called when element is created
+connectedCallback() - called when inserted into DOM
+disconnectedCallback - called when removed from DOM
+attributeChangedCallback(attribiteName, oldValue, newValue)
+
+IN HTML:
+<app-component></app-component>
+
+SHADDOW:
+element.attachShadow({ mode: open }) - creates a shaddowRoot
